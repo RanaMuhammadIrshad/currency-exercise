@@ -10,21 +10,21 @@ The function will:
 
 const myArr = [5.99, 3.56];
 
-const addCurrency = function (myArr, cur) {
+const addCurrency = function (arr, cur) {
   let myArray = [];
 
-  for (let i = 0; i < myArr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (cur === "€") {
-      myArray.push(myArr[i] + "€");
+      myArray.push(arr[i] + "€");
     } else if (cur === "$") {
-      myArray.push("$" + myArr[i]);
+      myArray.push("$" + arr[i]);
     }
   }
   return myArray;
 };
 
-// const returnedArr = addCurrency(myArr, "$");
-const returnedArr = addCurrency(myArr, "€");
+const returnedArr = addCurrency(myArr, "$");
+// const returnedArr = addCurrency(myArr, "€");
 console.log(returnedArr);
 
 /* ## Once you are done, create a new function called printPrices.
@@ -32,10 +32,10 @@ printPrices takes the returnArr as a parameter and dynamically prints out the fo
  - "price 1 is 5.99€"
  - "price 2 is 3.45€" */
 
-const printPrices = function (returnedArr) {
-  for (let i = 0; i < returnedArr.length; i++) {
+const printPrices = function (retArr) {
+  for (let i = 0; i < retArr.length; i++) {
     let myString = "";
-    myString = `price ${i + 1} is ${returnedArr[i]}`;
+    myString = `price ${i + 1} is ${retArr[i]}`;
     console.log(myString);
   }
 };
